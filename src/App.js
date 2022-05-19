@@ -7,6 +7,7 @@ import Loading from "./components/Loading";
 import MessageBox from "./components/MessageBox";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
+import Homepage from "./pages/Homepage";
 
 import { useDispatch, useSelector } from "react-redux";
 import { selectAppLoading } from "./store/appState/selectors";
@@ -15,7 +16,7 @@ import HeroBanner from "./components/HeroBanner";
 
 const Home = () => (
   <HeroBanner>
-    <h1>Home</h1>
+    <Homepage />
   </HeroBanner>
 );
 const Other = () => (

@@ -1,0 +1,8 @@
+.space-card {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 400px;
+  border: 2px solid black;
+  margin: 15px;
+}
