@@ -21,11 +21,12 @@ export default function Homepage() {
         alignItems: "center",
       }}
     >
-      <h1>HOME</h1>
+      <h1>Spaces</h1>
       {spaces.map((s) => {
         return (
           <SpaceCard
             key={s.id}
+            id={s.id}
             title={s.title}
             description={s.description}
             backgroundColor={s.backgroundColor}

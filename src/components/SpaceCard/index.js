@@ -1,4 +1,5 @@
 import "./styles.css";
+import { Link } from "react-router-dom";
 export default function SpaceCard(props) {
   return (
     <div
@@ -7,7 +8,9 @@ export default function SpaceCard(props) {
     >
       <h2>{props.title}</h2>
       <p>{props.description}</p>
-      <button>Visit space</button>
+      <Link to={`spaces/${props.id}`}>
+        <button>Visit space</button>
+      </Link>
     </div>
   );
 }
