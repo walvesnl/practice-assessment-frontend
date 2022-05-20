@@ -20,13 +20,20 @@ export const userSlice = createSlice({
       localStorage.removeItem("token");
       state.token = null;
       state.profile = null;
+      state.space = null;
     },
     tokenStillValid: (state, action) => {
       state.profile = action.payload.user;
+      state.space = action.payload.space;
+    },
+    storyDeleted: (state, action) => {
+      const storyId = action.payload.storyId;
+      state.space.stories = state.space.stories.filter((s) => s.id !== storyId);
     },
   },
 });
 
-export const { loginSuccess, logOut, tokenStillValid } = userSlice.actions;
+export const { loginSuccess, logOut, tokenStillValid, storyDeleted } =
+  userSlice.actions;
 
 export default userSlice.reducer;

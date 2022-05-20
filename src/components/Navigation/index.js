@@ -15,7 +15,7 @@ export default function Navigation() {
   const loginLogoutControls = token ? <LoggedIn /> : <LoggedOut />;
   const mySpace =
     token && user ? (
-      <NavbarItem path={`/spaces/${user.id}`} linkText="My Space" />
+      <NavbarItem path={`/myspace`} linkText="My Space" />
     ) : (
       false
     );

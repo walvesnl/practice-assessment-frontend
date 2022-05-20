@@ -13,6 +13,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectAppLoading } from "./store/appState/selectors";
 import { getUserWithStoredToken } from "./store/user/actions";
 import HeroBanner from "./components/HeroBanner";
+import MySpace from "./pages/MySpace/MySpace";
 
 const Home = () => (
   <HeroBanner>
@@ -44,6 +45,7 @@ function App() {
         <Route path="/other" element={<Other />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/myspace" element={<MySpace />} />
       </Routes>
     </div>
   );
